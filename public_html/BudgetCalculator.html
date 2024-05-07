@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+   <link rel="stylesheet" href="ConstantStyle.css">             
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Budget Calculator</title>
+    <link rel="stylesheet" href="ConstantStyle.css">
+   
+    <style>
+        body {
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: buttonhighlight;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);/* Added margin-top to separate the form from the navigation */
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        input[type="number"] {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #result {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 18px;
+        }
+        }
+    </style>
+    </head>
+  <link rel="icon" href="Screenshot 2024-04-15 192607.png" type="image/x-icon">
+<body>
+    <div class="dropdown">
+  <button class="dropbtn">Menu</button>
+  <div class="dropdown-content">
+        <a href="BudgetCalculator.html">Calculator</a>
+        <a href="ExpenseTracker.html">Expense Tracker</a>
+        <a href="Profile.html">My Profile</a>
+        <a href="FinancialResourse.html">Resources</a>
+        <a href="index.html">Homepage</a>
+       
+    </div>
+   </div>
+    <h1>Budget Calculator</h1>
+
+    <div class="container">
+        <form id="budgetForm">
+            <label for="income">Monthly Income:</label>
+            <input type="number" id="income" name="income" required>
+
+            <label for="expenses">Monthly Expenses:</label>
+            <input type="number" id="expenses" name="expenses" required>
+
+            <label for="savings">Monthly Savings:</label>
+            <input type="number" id="savings" name="savings" required>
+
+            <button type="submit">Calculate</button>
+        </form>
+
+        <div id="result">
+            <!-- Result will be displayed here -->
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('budgetForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting
+
+            // Get values from form inputs
+            var income = parseFloat(document.getElementById('income').value);
+            var expenses = parseFloat(document.getElementById('expenses').value);
+            var savings = parseFloat(document.getElementById('savings').value);
+
+            // Perform calculation
+            var total = income - expenses - savings;
+
+            // Display result
+            document.getElementById('result').innerText = "Your total budget for the month is R" + total.toFixed(2);
+        });
+        
+    </script>
+</body>
+   <div class="footer">         
+                    </div>
+</html>

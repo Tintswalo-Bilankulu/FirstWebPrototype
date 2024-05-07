@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <link rel="stylesheet" href="ConstantStyle.css" type="text/css"/>
+
+        <style>
+    /* Add your CSS styling here */
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: buttonhighlight;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 10px;
+      color: #555;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      padding: 10px;
+      background-color: #fff;
+      border-bottom: 1px solid #ddd;
+    }
+
+    li:last-child {
+      border-bottom: none;
+    }
+  </style>
+        <title>Expense tracker</title>
+        
+        <link rel="icon" href="Screenshot 2024-04-15 192607.png" type="image/x-icon">
+    </head>
+    <body>
+       <div class="dropdown">
+  <button class="dropbtn">Menu</button>
+  <div class="dropdown-content">
+        <a href="BudgetCalculator.html">Calculator</a>
+        <a href="ExpenseTracker.html">Expense Tracker</a>
+        <a href="Profile.html">My Profile</a>
+        <a href="FinancialResourse.html">Resources</a>
+        <a href="index.html">Homepage</a>
+       
+    </div>
+   </div>     
+        
+    <h1>Expense Tracker</h1>
+    <div class="container">
+        <form id="expenseForm">
+          <label for="expenseName">Expense Name:</label>
+          <input type="text" id="expenseName" name="expenseName" required>
+
+          <label for="expenseAmount">Expense Amount:</label>
+          <input type="number" id="expenseAmount" name="expenseAmount" required>
+
+          <button type="submit">Add Expense</button>
+        </form>
+
+    <ul id="expenseList">
+      <!-- Expenses will be displayed here -->
+    </ul>
+  </div>
+
+  <script>
+    document.getElementById('expenseForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the form from submitting
+
+      // Get values from form inputs
+      var expenseName = document.getElementById('expenseName').value;
+      var expenseAmount = parseFloat(document.getElementById('expenseAmount').value);
+
+      // Create a new list item to display the expense
+      var li = document.createElement('li');
+      li.textContent = expenseName + ': R' + expenseAmount.toFixed(2);
+
+      // Append the new list item to the expense list
+      document.getElementById('expenseList').appendChild(li);
+
+      // Clear the form inputs
+      document.getElementById('expenseName').value = '';
+      document.getElementById('expenseAmount').value = '';
+    });
+  </script>
+  
+    </body>
+    <div class="footer">         
+                    </div>
+</html>

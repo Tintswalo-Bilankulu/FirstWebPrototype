@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <link rel="stylesheet" href="ConstantStyle.css">   
+        <link rel="icon" href="Screenshot 2024-04-15 192607.png" type="image/x-icon">
+        <style>
+          body {
+            
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: buttonhighlight;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .cancelbtn {
+            background-color: #f44336;
+            color: white;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        .cancelbtn:hover {
+            background-color: #d32f2f;
+        }
+
+        .psw {
+            text-align: right;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+        </style>
+        <title>Login</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+    <div class="container">
+    <h2>Login</h2>
+    <form action="BudgetCalculator.html">
+        <label for="uname">Username</label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+
+        <label for="psw">Password</label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+        
+        <button type="submit">Login</button>
+        <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+
+        <div class="psw">
+            <a href="#">Forgot password?</a>
+        </div>
+    </form>
+</body>
+</html>
