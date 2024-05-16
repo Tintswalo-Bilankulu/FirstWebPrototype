@@ -1,24 +1,27 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
--->
-<html>
-    <head>
-        <link rel="stylesheet" href="ConstantStyle.css" type="text/css"/>
-
-         <style>
-     body {
-            
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tintswalo Faith - Profile</title>
+     <link rel="stylesheet" href="ConstantStyle.css" type="text/css"/>
+    <link rel="icon" href="Screenshot 2024-04-15 192607.png" type="image/x-icon">
+    <style>
+      
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #007bff;
+            margin: 0;
+            padding: 0;
         }
 
         .container {
             max-width: 800px;
             margin: 20px auto;
-            padding: 20px;
             background-color: #fff;
-            border-radius: 5px;
-            box-shadow: activeborder;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
         }
 
         h1 {
@@ -27,44 +30,44 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
         }
 
         .profile-info {
-            margin-bottom: 20px;
             text-align: center;
         }
 
         .profile-info img {
-            width: 120px;
-            height: 120px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
+            border: 5px solid #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         .profile-info h2 {
             margin-bottom: 10px;
+            color: #0056b3;
         }
 
-        .followers {
-            color: black;
-        }
-
-        .posts {
-            margin-top: 20px;
+        .profile-info p {
+            color: #666;
+            margin-bottom: 20px;
         }
 
         .post {
-            background-color: #f5f5f5;
-            padding: 10px;
-            border-radius: 5px;
-            margin-bottom: 10px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
         }
 
-        .social-media {
-            margin-top: 10px;
-            text-align: right;
+        .post p {
+            color: #333;
+            line-height: 1.6;
         }
 
         .social-media a {
             display: inline-block;
-            padding: 5px 10px;
+            padding: 8px 16px;
             background-color: #007bff;
             color: #fff;
             text-decoration: none;
@@ -75,15 +78,64 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
         .social-media a:hover {
             background-color: #0056b3;
         }
-  </style>
- 
-        <title>My Profile</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="Screenshot 2024-04-15 192607.png" type="image/x-icon">
-    </head>
-   <body>
-       <div class="dropdown">
+
+        .comments {
+            margin-top: 20px;
+        }
+
+        .comment {
+            background-color: #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .comment p {
+            color: #333;
+            line-height: 1.4;
+        }
+
+        .like-btn,
+        .useful-btn {
+            margin-right: 10px;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .like-btn:hover,
+        .useful-btn:hover {
+            background-color: #0056b3;
+            color: #fff;
+        }
+
+        .join-community {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .join-community button {
+            padding: 12px 24px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .join-community button:hover {
+            background-color: #555;
+        }
+
+    </style>
+    
+</head>
+  <div class="dropdown">
   <button class="dropbtn">Menu</button>
   <div class="dropdown-content">
         <a href="BudgetCalculator.html">Calculator</a>
@@ -94,36 +146,87 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
        
     </div>
    </div>
-        <div class="container">
-            <h1>My Profile</h1>
+<body>
+<div class="container">
+    <h1>My Profile</h1>
 
-            <div class="profile-info">
-                <img src="profile.jpg" alt="Profile Picture">
-                <h2>Tintswalo Faith</h2>
-                <p class="followers">Followers: 100</p>
+    <div class="profile-info">
+        <img src="profile.jpg" alt="Profile Picture">
+        <h2>Tintswalo Faith</h2>
+        <p class="followers">Followers: 100</p>
+    </div>
+
+    <div class="posts">
+        <div class="post">
+            <p>I just wanted to say hello and let the CoinBliss community know who I am. Making connections with other students who share my enthusiasm for financial empowerment and education excites me. Let's help one another out as we travel through our finances!</p>
+            <div class="social-media">
+                <button class="like-btn">Like</button>
+                
+                <a href="https://www.facebook.com/">Share on Facebook</a>
+                <a href="https://twitter.com/?lang=en-za">Share on Twitter</a>
+                <a href="https://www.instagram.com/?hl=en">Share on Instagram</a>
             </div>
-
-            <div class="posts">
-                <div class="post">
-                    <p>I just wanted to say hello and let the CoinBliss community know who I am. Making connections with other students who share my enthusiasm for financial empowerment and education excites me. Let's help one another out as we travel through our finances!</p>
-                    <div class="social-media">
-                        <a href="https://www.facebook.com/">Share on Facebook</a>
-                        <a href="https://twitter.com/?lang=en-za">Share on Twitter</a>
-                        <a href="https://www.instagram.com/?hl=en">Share on Instagram</a>
-                    </div>
+            <div class="comments">
+                <div class="comment">
+                    <p>Jess123: Welcome to CoinBliss! Excited to connect with you.</p>
+                     <button class="useful-btn">Useful?</button>
                 </div>
-                <div class="post">
-                    <p>I recently started using the expense tracking feature on CoinBliss, and I'm really enjoying it! I'd like to know how to maximize this feature and see my spending patterns more clearly. Does anyone have any tips?</p>
-                    <div class="social-media">
-                        <a href="https://www.facebook.com/">Share on Facebook</a>
-                        <a href="https://twitter.com/?lang=en-za">Share on Twitter</a>
-                        <a href="https://www.instagram.com/?hl=en">Share on Instagram</a>
-                    </div>
+                <div class="comment">
+                    <p>FinanceGeek45: Hello Tintswalo, looking forward to learning from your posts.</p>
+                     <button class="useful-btn">Useful?</button>
                 </div>
+                <!-- Add more comments dynamically -->
             </div>
         </div>
- </body>
-     <div class="footer">
-         © 2024 CoinBliss. All rights reserved.
-                    </div>
+        <div class="post">
+            <p>I recently started using the expense tracking feature on CoinBliss, and I'm really enjoying it! I'd like to know how to maximize this feature and see my spending patterns more clearly. Does anyone have any tips?</p>
+            <div class="social-media">
+                <button class="like-btn">Like</button>
+               
+                <a href="https://www.facebook.com/">Share on Facebook</a>
+                <a href="https://twitter.com/?lang=en-za">Share on Twitter</a>
+                <a href="https://www.instagram.com/?hl=en">Share on Instagram</a>
+            </div>
+            <div class="comments">
+                <div class="comment">
+                    <p>Frank32:! I suggest categorizing your expenses for better insights.</p>
+                     <button class="useful-btn">Useful?</button>
+                </div>
+                <!-- Add more comments dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <div class="join-community">
+        <button>Join Financial Empowerment Community</button>
+    </div>
+</div>
+<div class="footer">
+    © 2024 CoinBliss. All rights reserved.
+</div>
+
+<script>
+    // Script for handling like button click
+    const likeButtons = document.querySelectorAll('.like-btn');
+    likeButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            alert('You liked this post!');
+        });
+    });
+
+    // Script for handling useful button click
+    const usefulButtons = document.querySelectorAll('.useful-btn');
+    usefulButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const response = confirm('Was this comment useful?');
+            if (response) {
+                alert('Thank you for your feedback!');
+            } else {
+                alert('We\'ll try to improve!');
+            }
+        });
+    });
+</script>
+
+</body>
 </html>
